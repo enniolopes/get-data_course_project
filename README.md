@@ -1,6 +1,6 @@
 
 Run_Analysis.R
-The run_analysis.R script reads data from the "Human Activity Recognition Using Smartphones Dataset Version 1.0" and produces a new - tidy - dataset. This is for the johns Hopkins Coursera - Getting and Cleaning Data Course Project.
+The run_analysis.R script reads data from the "Human Activity Recognition Using Smartphones Dataset Version 1.0" and produces a new - tidy - dataset. This is for the Johns Hopkins - Getting and Cleaning Data Course Project.
 
 
 The data in the "Human Activity Recognition Using Smartphones Dataset Version 1.0" have been taken from experiments carried out with a group of 30 volunteers within an age bracket of 19-48 years.
