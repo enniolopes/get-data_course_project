@@ -45,8 +45,13 @@ meanstd <- data[,c("subjectId","activityId",mean_col,std_col)]
 descrnames <- merge(activityType,meanstd,by.x="activityId",by.y="activityId",all=TRUE)
 
 #4. Labels the data set_____________________________
+if (!("reshape2" %in% row.names(installed.packages()))) {
+    print("Install the package 'reshape2' before continuing")
+} else {
+    library(reshape2)
+}
 datamelt <- melt(descrnames,id=c("activityId","activityType","subjectId"))
 
 #5. Tidy data set with the average__________________
 meandata <- dcast(datamelt,activityId + activityType + subjectId ~ variable,mean)
-write.table(meandata,"./tidy_data.txt")
+write.table(meandata,"./tidy_data.txt", row.names = FALSE)
